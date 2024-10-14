@@ -149,7 +149,7 @@ function start() {
     alert("sláðu inn streng með nokkur orðum til að fá upplýsingar um: \n -lengsta orðið \n -Stysta orðið \n -Streng snúnum við \n -fjölda sérhljóða \n -fjölda samhljóða \n -hvort strengur sé samhverfur");
     const str = prompt('Sláðu inn streng með nokkrum orðum','');
     if (str === null) {
-      break; // Exit the loop if the user presses cancel
+      break;
     }
     let lengst = longest(str);
     let styst = shortest(str);
