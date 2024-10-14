@@ -98,14 +98,14 @@ function palindrome(str) {
     if(str.trim() === ''){
       return false;
     }
-    let reverse = str.split('').reverse().join('');
-    return str === reverse;
+    const reversed = reverse(str.toLowerCase());
+    return str.toLowerCase() === reversed;
   }
-  return null;
+  return false;
 }
 console.assert(palindrome('hæh') === true, 'palindrome: skoðum hvort strengur er samhverfur');
 console.assert(palindrome('') === false, 'palindrome: ef strengur ef tómur skilum false');
-console.assert(palindrome(false) === null, 'ef strengur er ekki strengur skilum null');
+console.assert(palindrome(false) === false, 'ef strengur er ekki strengur skilum null');
 
 function vowels(str) {
   if(isString(str)){
@@ -149,7 +149,7 @@ function start() {
     alert("sláðu inn streng með nokkur orðum til að fá upplýsingar um: \n -lengsta orðið \n -Stysta orðið \n -Streng snúnum við \n -fjölda sérhljóða \n -fjölda samhljóða \n -hvort strengur sé samhverfur");
     const str = prompt('Sláðu inn streng með nokkrum orðum','');
     if (str === null) {
-      break; // Exit the loop if the user presses cancel
+      break;
     }
     let lengst = longest(str);
     let styst = shortest(str);
