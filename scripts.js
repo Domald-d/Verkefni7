@@ -98,8 +98,8 @@ function palindrome(str) {
     if(str.trim() === ''){
       return false;
     }
-    const reversed = reverse(str);
-    return str === reversed;
+    const reversed = reverse(str.toLowerCase());
+    return str.toLowerCase() === reversed;
   }
   return false;
 }
