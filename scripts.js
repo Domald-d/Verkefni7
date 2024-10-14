@@ -101,11 +101,11 @@ function palindrome(str) {
     let reverse = str.split('').reverse().join('');
     return str === reverse;
   }
-  return null;
+  return false;
 }
 console.assert(palindrome('hæh') === true, 'palindrome: skoðum hvort strengur er samhverfur');
 console.assert(palindrome('') === false, 'palindrome: ef strengur ef tómur skilum false');
-console.assert(palindrome(false) === null, 'ef strengur er ekki strengur skilum null');
+console.assert(palindrome(false) === false, 'ef strengur er ekki strengur skilum null');
 
 function vowels(str) {
   if(isString(str)){
